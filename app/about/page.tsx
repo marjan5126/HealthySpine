@@ -7,21 +7,21 @@ const teamMembers = [
   {
     name: "Shariar Marjan",
     role: "Developer",
-    image: "/marjan.jpg",  // Updated path to use public directory
+    image: "https://i.ibb.co.com/tpgzzVg8/marjan.jpg",  // Updated path to use public directory
     github: "https://github.com/yourgithub",
     linkedin: "https://linkedin.com/in/yourlinkedin",
   },
   {
-    name: "Team Member 2",
+    name: "Nerob",
     role: "Developer",
-    image: "/nerob.jpg", // Add actual image path
+    image: "https://i.ibb.co.com/qLdDRZp9/nerob.jpg", // Add actual image path
     github: "https://github.com/member2",
     linkedin: "https://linkedin.com/in/member2",
   },
   {
-    name: "Team Member 3",
+    name: "Rumi",
     role: "Developer",
-    image: "/rumi.jpg", // Add actual image path
+    image: "https://i.ibb.co.com/dwBdYTst/rumi.jpg", // Add actual image path
     github: "https://github.com/member3",
     linkedin: "https://linkedin.com/in/member3",
   },
@@ -57,15 +57,21 @@ export default function AboutPage() {
                 <div className="absolute -inset-0.5 rounded-full bg-gradient-to-r from-soft-blue to-gentle-lavender blur" />
                 <div className="relative rounded-full border-4 border-white bg-gray-200">
                   <Image
-                    src="/bari.jpg"
+                    src="https://i.ibb.co.com/9JmDKX2/bari.jpg"
                     alt="Barikahar Sir"
                     width={160}
                     height={160}
                     className="rounded-full object-cover"
+                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    priority
+                    onError={(e) => {
+                      const img = e.target as HTMLImageElement;
+                      img.src = "https://ui-avatars.com/api/?name=Barikahar&background=0D8ABC&color=fff";
+                    }}
                   />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-rich-navy">Professor Barikahar Sir</h3>
+              <h3 className="text-2xl font-bold text-rich-navy">Bari kahar Sir</h3>
               <p className="mt-2 text-lg text-muted-foreground">Project Supervisor</p>
               <p className="mt-4 text-center text-muted-foreground">
                 Department of Computer Science & Engineering

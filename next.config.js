@@ -13,7 +13,10 @@ const nextConfig = {
     maxInactiveAge: 25 * 1000,
     // Number of pages that should be kept in memory
     pagesBufferLength: 2
-  }
+  },
+  images: {
+    domains: ['i.ibb.co', 'i.ibb.co.com'], // Add both domains to be safe
+  },
 }
 
 module.exports = nextConfig
