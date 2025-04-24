@@ -292,14 +292,13 @@ export default function ExercisePlans() {
                   </div>
                   <Progress
                     value={calculateProgress(plan.exercises)}
-                    className="h-2"
-                    indicatorClassName={
+                    className={`h-2 ${
                       plan.level === "beginner"
-                        ? "bg-vibrant-green"
+                        ? "[&>div]:bg-vibrant-green"
                         : plan.level === "intermediate"
-                          ? "bg-soft-blue"
-                          : "bg-warm-orange"
-                    }
+                        ? "[&>div]:bg-amber-500"
+                        : "[&>div]:bg-red-500"
+                    }`}
                   />
                 </div>
               </CardHeader>

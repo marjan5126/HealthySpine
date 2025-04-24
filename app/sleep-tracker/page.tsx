@@ -312,13 +312,6 @@ export default function SleepTracker() {
                 <Progress
                   value={Math.min(100, Math.max(0, (averageSleepDuration / 8) * 100))}
                   className="h-2"
-                  indicatorClassName={
-                    averageSleepDuration >= 7 && averageSleepDuration <= 9
-                      ? "bg-vibrant-green"
-                      : averageSleepDuration >= 6
-                        ? "bg-soft-yellow"
-                        : "bg-warm-orange"
-                  }
                 />
               </div>
 
